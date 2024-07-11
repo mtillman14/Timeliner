@@ -14,6 +14,13 @@
 		9A9A810F2C40362D0041666F /* TimelinerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9A810E2C40362D0041666F /* TimelinerTests.swift */; };
 		9A9A81192C40362D0041666F /* TimelinerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9A81182C40362D0041666F /* TimelinerUITests.swift */; };
 		9A9A811B2C40362D0041666F /* TimelinerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9A811A2C40362D0041666F /* TimelinerUITestsLaunchTests.swift */; };
+		9A9A812A2C404FBE0041666F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9A81292C404FBE0041666F /* AppDelegate.swift */; };
+		9A9A812E2C4053920041666F /* PopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9A812D2C4053920041666F /* PopoverView.swift */; };
+		9A9A81302C4054120041666F /* TimelineEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9A812F2C4054120041666F /* TimelineEntry.swift */; };
+		9A9A81322C4054320041666F /* TimelineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9A81312C4054320041666F /* TimelineViewModel.swift */; };
+		9A9A81342C4055230041666F /* AddEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9A81332C4055230041666F /* AddEntryView.swift */; };
+		9A9A81362C405D2A0041666F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9A9A81352C405D2A0041666F /* Info.plist */; };
+		9A9A81382C40628D0041666F /* EditEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9A81372C40628D0041666F /* EditEntryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +52,13 @@
 		9A9A81142C40362D0041666F /* TimelinerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimelinerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A9A81182C40362D0041666F /* TimelinerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelinerUITests.swift; sourceTree = "<group>"; };
 		9A9A811A2C40362D0041666F /* TimelinerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelinerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9A9A81292C404FBE0041666F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9A9A812D2C4053920041666F /* PopoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverView.swift; sourceTree = "<group>"; };
+		9A9A812F2C4054120041666F /* TimelineEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineEntry.swift; sourceTree = "<group>"; };
+		9A9A81312C4054320041666F /* TimelineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineViewModel.swift; sourceTree = "<group>"; };
+		9A9A81332C4055230041666F /* AddEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEntryView.swift; sourceTree = "<group>"; };
+		9A9A81352C405D2A0041666F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A9A81372C40628D0041666F /* EditEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEntryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +109,15 @@
 		9A9A80FB2C40362C0041666F /* Timeliner */ = {
 			isa = PBXGroup;
 			children = (
+				9A9A812D2C4053920041666F /* PopoverView.swift */,
+				9A9A81352C405D2A0041666F /* Info.plist */,
 				9A9A80FC2C40362C0041666F /* TimelinerApp.swift */,
 				9A9A80FE2C40362C0041666F /* ContentView.swift */,
+				9A9A81332C4055230041666F /* AddEntryView.swift */,
+				9A9A81292C404FBE0041666F /* AppDelegate.swift */,
+				9A9A812F2C4054120041666F /* TimelineEntry.swift */,
+				9A9A81312C4054320041666F /* TimelineViewModel.swift */,
+				9A9A81372C40628D0041666F /* EditEntryView.swift */,
 				9A9A81002C40362D0041666F /* Assets.xcassets */,
 				9A9A81052C40362D0041666F /* Timeliner.entitlements */,
 				9A9A81022C40362D0041666F /* Preview Content */,
@@ -235,6 +256,7 @@
 			files = (
 				9A9A81042C40362D0041666F /* Preview Assets.xcassets in Resources */,
 				9A9A81012C40362D0041666F /* Assets.xcassets in Resources */,
+				9A9A81362C405D2A0041666F /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,7 +281,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A9A812A2C404FBE0041666F /* AppDelegate.swift in Sources */,
+				9A9A81382C40628D0041666F /* EditEntryView.swift in Sources */,
+				9A9A81322C4054320041666F /* TimelineViewModel.swift in Sources */,
+				9A9A81342C4055230041666F /* AddEntryView.swift in Sources */,
 				9A9A80FF2C40362C0041666F /* ContentView.swift in Sources */,
+				9A9A81302C4054120041666F /* TimelineEntry.swift in Sources */,
+				9A9A812E2C4053920041666F /* PopoverView.swift in Sources */,
 				9A9A80FD2C40362C0041666F /* TimelinerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -427,6 +455,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Timeliner/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Timeliner/Info.plist";
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -452,6 +482,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Timeliner/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Timeliner/Info.plist";
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
