@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A84ACF62C4080490019C6DD /* GlobalHotKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A84ACF52C4080490019C6DD /* GlobalHotKey.swift */; };
+		9A84ACF92C4080B70019C6DD /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A84ACF82C4080B70019C6DD /* Carbon.framework */; };
 		9A9A80FD2C40362C0041666F /* TimelinerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9A80FC2C40362C0041666F /* TimelinerApp.swift */; };
 		9A9A80FF2C40362C0041666F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9A80FE2C40362C0041666F /* ContentView.swift */; };
 		9A9A81012C40362D0041666F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A9A81002C40362D0041666F /* Assets.xcassets */; };
@@ -41,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9A84ACF52C4080490019C6DD /* GlobalHotKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalHotKey.swift; sourceTree = "<group>"; };
+		9A84ACF82C4080B70019C6DD /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 		9A9A80F92C40362C0041666F /* Timeliner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Timeliner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A9A80FC2C40362C0041666F /* TimelinerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelinerApp.swift; sourceTree = "<group>"; };
 		9A9A80FE2C40362C0041666F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -66,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A84ACF92C4080B70019C6DD /* Carbon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +91,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9A84ACF72C4080B70019C6DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9A84ACF82C4080B70019C6DD /* Carbon.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9A9A80F02C40362C0041666F = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +106,7 @@
 				9A9A810D2C40362D0041666F /* TimelinerTests */,
 				9A9A81172C40362D0041666F /* TimelinerUITests */,
 				9A9A80FA2C40362C0041666F /* Products */,
+				9A84ACF72C4080B70019C6DD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				9A9A812D2C4053920041666F /* PopoverView.swift */,
+				9A84ACF52C4080490019C6DD /* GlobalHotKey.swift */,
 				9A9A81352C405D2A0041666F /* Info.plist */,
 				9A9A80FC2C40362C0041666F /* TimelinerApp.swift */,
 				9A9A80FE2C40362C0041666F /* ContentView.swift */,
@@ -282,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A9A812A2C404FBE0041666F /* AppDelegate.swift in Sources */,
+				9A84ACF62C4080490019C6DD /* GlobalHotKey.swift in Sources */,
 				9A9A81382C40628D0041666F /* EditEntryView.swift in Sources */,
 				9A9A81322C4054320041666F /* TimelineViewModel.swift in Sources */,
 				9A9A81342C4055230041666F /* AddEntryView.swift in Sources */,

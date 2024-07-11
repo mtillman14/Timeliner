@@ -14,6 +14,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var statusItem: NSStatusItem?
     var popover: NSPopover?
     var timelineViewModel: TimelineViewModel!
+    var globalHotKey: GlobalHotKey!
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         timelineViewModel = TimelineViewModel()
@@ -31,6 +32,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         popover?.contentSize = NSSize(width: 300, height: 400)
         popover?.behavior = .transient
         popover?.contentViewController = NSHostingController(rootView: PopoverView().environmentObject(timelineViewModel))
+        
+        // Set up global hot key
+        globalHotKey = GlobalHotKey()
+        globalHotKey.onHotKeyPressed = { [weak self] in
+            self?.togglePopover(nil)
+        }
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
