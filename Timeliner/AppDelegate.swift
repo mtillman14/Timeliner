@@ -51,31 +51,27 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     @objc func togglePopover(_ sender: AnyObject?) {
-        if let button = statusItem?.button {
-            if popover?.isShown == true {
-                popover?.performClose(sender)
+        if let event = NSApp.currentEvent {
+            if event.type == .rightMouseUp {
+                showContextMenu()
             } else {
-                popover?.show(relativeTo: button.bounds, of: button, preferredEdge: .minY)
-                
-                // Adjust the popover position after it's shown
-                DispatchQueue.main.async {
-                    if let popoverWindow = self.popover?.contentViewController?.view.window,
-                       let buttonWindow = button.window {
-                        let buttonFrame = button.convert(button.bounds, to: nil)
-                        let windowFrame = buttonWindow.convertToScreen(buttonFrame)
-                        
-                        // Get the height of the menu bar
-                        let menuBarHeight = NSStatusBar.system.thickness
-                        
-                        // Calculate the new origin for the popover window
-                        let newOriginX = windowFrame.origin.x + (windowFrame.width - popoverWindow.frame.width) / 2 + 5 // Shift slightly to the right
-                        let newOriginY = windowFrame.origin.y - popoverWindow.frame.height - menuBarHeight + 5 // Move slightly up
-                        
-                        // Set the new frame for the popover window
-                        popoverWindow.setFrameOrigin(NSPoint(x: newOriginX, y: newOriginY))
+                if let button = statusItem?.button {
+                    if popover?.isShown == true {
+                        popover?.performClose(sender)
+                    } else {
+                        popover?.show(relativeTo: button.bounds, of: button, preferredEdge: .minY)
                     }
                 }
             }
         }
+    }
+
+    func showContextMenu() {
+        let menu = NSMenu()
+        menu.addItem(NSMenuItem(title: "Quit", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
+        
+        statusItem?.menu = menu
+        statusItem?.button?.performClick(nil)
+        statusItem?.menu = nil
     }
 }
